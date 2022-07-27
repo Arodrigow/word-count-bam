@@ -1,1 +1,16 @@
+.contentBox {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.formBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.formItem {
+  margin: 1rem 0rem;
+}
