@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import styles from "../styles/Home.module.css";
+import { wordCount, quotationValue } from "./api/form";
 
 const Home: NextPage = () => {
   //TODO: Change the responsability of handling the form from here!
@@ -32,7 +33,13 @@ const Home: NextPage = () => {
 
   return (
     <div className={styles.contentBox}>
-      <form onSubmit={handleSubmit} className={styles.formBox}>
+      <form
+        action="api/test"
+        encType="multipart/form-data"
+        method="post"
+        className={styles.formBox}
+      >
+        <input type="file" name="textFile" />
         <label htmlFor="textContent" className={styles.formItem}>
           Paste the text on the area:
         </label>
